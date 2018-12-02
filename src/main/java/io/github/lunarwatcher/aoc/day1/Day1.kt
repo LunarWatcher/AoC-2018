@@ -36,3 +36,4 @@ fun day1part2processor(nums: List<Int>) : Long{
     }
 
 }
+
