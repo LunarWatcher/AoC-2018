@@ -1,5 +1,5 @@
 # Read through the code your damn self xd
-resources/*.txt
+/src/main/resources/*.txt
 
 !gradle/wrapper/
 
