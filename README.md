@@ -1,0 +1,1 @@
+This year's [Advent of Code](https://adventofcode.com/2018) answers, written in Kotlin.
