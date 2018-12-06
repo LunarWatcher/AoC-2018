@@ -22,7 +22,7 @@ fun <T> readFile(loc: String, cls: Class<T>) : List<T>{
 
 fun <F, S> readFile(loc: String, first: Class<F>, second: Class<S>) : List<Pair<F, S>>{
     val list = mutableListOf<Pair<F, S>>()
-    val file = Thread.currentThread().contextClassLoader.getResource(loc)
+    val file = Thread.currentThread().contextClassLoader.getResource(loc) ?: throw RuntimeException("Missing file: $loc")
     val reader = BufferedReader(URLReader(file))
 
     val lines = reader.readLines().map { it.replace(" ", "").split(",") }
