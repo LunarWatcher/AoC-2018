@@ -65,3 +65,5 @@ hs_err_pid*
 # Gradle >.<
 
 .gradle/
+# Ree, new file structure xd
+build/
