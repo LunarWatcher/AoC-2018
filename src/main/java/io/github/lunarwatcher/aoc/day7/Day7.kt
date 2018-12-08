@@ -59,7 +59,7 @@ fun day7part2processor(raw: List<String>) : Int {
 
     var workers = 0
     var time = -1
-    var workMapping = mutableMapOf<Char, Int>()
+    val workMapping = mutableMapOf<Char, Int>()
     while(map.size > 0){
         with (workMapping.filter { it.value == time }.keys.sorted()){
             forEach {
