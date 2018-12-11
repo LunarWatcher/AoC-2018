@@ -22,7 +22,7 @@ fun day10part1processor(raw: List<String>){
     var lastIndex = 0;
     // This was a literal hell xd Using Int.MAX_VALUE will print too much. Anything over 1000 will in general.
     // These were set based on observations; The final output is generally tiny in span, which means the right
-    // answer is likely at one of the time steps with the lowest spread of points. 
+    // answer is likely at one of the time steps with the lowest spread of points.
     var minXVal = 100;
     var minYVal = 100;
 
