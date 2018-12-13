@@ -1,6 +1,6 @@
 package io.github.lunarwatcher.aoc.framework
 
-interface Challenge<I> {
+interface Challenge<I, PF> {
     /**
      * Runs the actual part 1
      */
@@ -14,11 +14,13 @@ interface Challenge<I> {
     /**
      * Processes part 1. Can be used in testing.
      */
-    fun processPart1(raw: I) : Any
+    fun processPart1(case: PF) : Any
 
     /**
      * Processes part 2. Can be used in testing.
      */
-    fun processPart2(case: I)
+    fun processPart2(case: PF) : Any
+
+    fun processData(input: I) : PF
 
 }

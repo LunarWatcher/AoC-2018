@@ -4,6 +4,7 @@ package io.github.lunarwatcher.aoc.commons
 
 import jdk.nashorn.api.scripting.URLReader
 import java.io.BufferedReader
+import java.io.FileNotFoundException
 import java.lang.RuntimeException
 
 
@@ -11,7 +12,7 @@ fun readFile(loc: String) = readFile(loc, String::class.java)
 
 fun <T> readFile(loc: String, cls: Class<T>) : List<T>{
     val list = mutableListOf<T>()
-    val file = Thread.currentThread().contextClassLoader.getResource(loc)
+    val file = Thread.currentThread().contextClassLoader.getResource(loc) ?: throw FileNotFoundException(loc)
     val reader = BufferedReader(URLReader(file))
     val lines = reader.readLines()
     for (line in lines){

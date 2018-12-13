@@ -27,7 +27,7 @@ class Day12Test {
 
 
 
-        require(day::processPart1, case, 325L)
+        require(day::processPart1, day.processData(case), 325L)
 
         println("Part 1: ${day.part1()}")
     }
@@ -38,7 +38,7 @@ class Day12Test {
     }
 
     companion object {
-        val day = Day12()
+        private val day = Day12()
     }
 
 }

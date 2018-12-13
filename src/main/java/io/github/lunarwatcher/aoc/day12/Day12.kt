@@ -6,8 +6,8 @@ import java.lang.UnsupportedOperationException
 
 data class Day12Data (val initialState: String, val modifiers: Map<String, Boolean>)
 
-class Day12 : Challenge<List<String>> {
-    private val data = parseInput(readFile("day12.txt"))
+class Day12 : Challenge<List<String>, Day12Data> {
+    private val data = processData(readFile("day12.txt"))
 
     override fun part1(): Any = process(data, 20)
 
@@ -19,13 +19,13 @@ class Day12 : Challenge<List<String>> {
         return initial100 + (50000000000 - 100) / 100L * diff
     }
 
-    override fun processPart1(raw: List<String>): Any = process(parseInput(raw), 20)
+    override fun processPart1(case: Day12Data): Any = process(case, 20)
 
-    override fun processPart2(case: List<String>) {
+    override fun processPart2(case: Day12Data) : Any {
         throw UnsupportedOperationException("No tests allowed for part 2 of this day.")
     }
 
-    private fun parseInput(raw: List<String>): Day12Data {
+    override fun processData(raw: List<String>): Day12Data {
         val initialState = raw[0].split(": ")[1]
         val modifiers = mutableMapOf<String, Boolean>()
 
