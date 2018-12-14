@@ -19,4 +19,5 @@ class CircleDeque<T>(vararg initialElements: T) : ArrayDeque<T>() {
                 addLast(remove())
         }
     }
+
 }
