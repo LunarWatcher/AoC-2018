@@ -1,4 +1,4 @@
-package io.github.lunarwatcher.aoc.Day14
+package io.github.lunarwatcher.aoc.day14
 
 import io.github.lunarwatcher.aoc.commons.readFile
 import io.github.lunarwatcher.aoc.framework.Challenge
@@ -12,7 +12,7 @@ class Day14 : Challenge<Int, Int> {
      * Part 2 is complete when a recipe starts with the input number is reached
      * The output is the number of recipes before the first index of the recipe that
      * starts with the input number. The examples are slightly misleading for this one;
-     * the actual numbers before or after are irrelevant. 
+     * the actual numbers before or after are irrelevant.
      */
     override fun part2(): Any = process2(int)
 
