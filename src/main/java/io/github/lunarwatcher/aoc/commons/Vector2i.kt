@@ -29,4 +29,6 @@ data class Vector2i(var x: Int, var y: Int){
 
         else return x == other.x && y == other.y;
     }
+
+    fun addAndCopy(xAdd: Int, yAdd: Int) = Vector2i(x + xAdd, y + yAdd);
 }

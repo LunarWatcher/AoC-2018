@@ -1,6 +1,6 @@
 package io.github.lunarwatcher.aoc
 
-import io.github.lunarwatcher.aoc.Day14.Day14
+import io.github.lunarwatcher.aoc.day14.Day14
 import org.junit.Test
 
 class Day14Test {

@@ -3,7 +3,7 @@ package io.github.lunarwatcher.aoc.day10
 import io.github.lunarwatcher.aoc.commons.Vector2i
 import io.github.lunarwatcher.aoc.commons.readFile
 
-val regex = "position=<(-?\\d*),(-?\\d*)>velocity=<(-?\\d*),(-?\\d*)>".toRegex();
+val regex = "pos=<(-?\\d*),(-?\\d*)>velocity=<(-?\\d*),(-?\\d*)>".toRegex();
 
 fun parseVectors(raw: List<String>) : List<Pair<Vector2i, Vector2i>>{
     return raw.map {

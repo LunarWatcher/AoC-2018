@@ -5,6 +5,15 @@ import io.github.lunarwatcher.aoc.commons.readFile
 import io.github.lunarwatcher.aoc.framework.Challenge
 import java.lang.IllegalArgumentException
 
+
+private val comparator = Comparator<GameObject>{ o1, o2 ->
+    if (o1.location.y == o2.location.y) {
+        o1.location.x - o2.location.x
+    } else {
+        o1.location.y - o2.location.y
+    }
+}
+
 enum class ObjectType {
     TURN_ONE, TURN_TWO, INTERSECTION, LINE, SHIP
 }
@@ -166,13 +175,7 @@ class Day13 : Challenge<List<String>, GameMap>{
                 data.routes.forEach { route -> route.refreshShipOrientation(it) }
 
             }
-            data.ships.sortWith(Comparator<GameObject>{ o1, o2 ->
-                if (o1.location.y == o2.location.y) {
-                    o1.location.x - o2.location.x
-                } else {
-                    o1.location.y - o2.location.y
-                }
-            })
+            data.ships.sortWith(comparator)
             // Avoids ConcurrentModificationException
             if(remove.isNotEmpty()){
                 remove.forEach { data.ships.remove(it) }
